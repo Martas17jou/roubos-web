@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Roubos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="Roubos Logo" class="logo-nav-img">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#uvod">Úvod</a>
+                <a href="index.html#o-nas">O nás</a>
+                <a href="kontakt.html" class="btn-nav">Napište nám</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="wrapper contact-wrapper">
+            <h2>KONTAKT</h2>
+            <div class="line-divider"></div>
+            <p class="status-text">Chceš nás na oslavu, akci nebo s náma něco pořešit?</p>
+            <p class="status-text">Ozvi se nám:</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-label">E-mail (kliknutím zkopíruješ):</span>
+                    <div class="copy-container">
+                        <button onclick="copyEmail()" id="email-btn" class="contact-link-btn">roubosofficial@gmail.com</button>
+                        <span class="tooltip" id="copy-tooltip">Zkopírováno!</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="index.html" class="link-btn back-btn">← Zpět na úvod</a>
+        </div>
+    </main>
+
+    <script>
+        function copyEmail() {
+            const emailText = document.getElementById("email-btn").innerText;
+            
+            navigator.clipboard.writeText(emailText).then(() => {
+                const tooltip = document.getElementById("copy-tooltip");
+                
+                tooltip.classList.add("show");
+                
+                setTimeout(() => {
+                    tooltip.classList.remove("show");
+                }, 2000);
+            }).catch(err => {
+                console.error("Chyba při kopírování: ", err);
+            });
+        }
+    </script>
+
+</body>
+</html>

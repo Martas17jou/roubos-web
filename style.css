@@ -1,4 +1,4 @@
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -85,7 +85,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 24px 60px 24px;
+    padding: 80px 24px 40px 24px;
 }
 
 .wrapper {
@@ -203,21 +203,25 @@ h1 {
     text-shadow: 0 0 15px rgba(0, 82, 204, 0.8);
 }
 
-@media (max-width: 480px) {
-    .nav-container { padding: 12px 16px; }
-    .nav-logo { font-size: 1.3rem; }
-    .nav-links { gap: 12px; }
-    .nav-links a { font-size: 0.85rem; }
-    .nav-links .btn-nav { padding: 6px 12px; }
-    
-    h1 { font-size: 2.7rem; }
-    .subtitle { font-size: 0.85rem; }
-    .wrapper { padding: 30px 16px; }
-    .link-btn { padding: 14px; font-size: 0.95rem; }
-    
-    .about-section { padding: 60px 16px; }
-    .about-container h2 { font-size: 1.8rem; }
-    .about-container p { font-size: 1rem; }
+.logo-nav-img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.logo-main-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-main-img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(0, 82, 204, 0.5));
 }
 
 .contact-wrapper h2 {
@@ -339,22 +343,21 @@ h1 {
     opacity: 1;
 }
 
-.logo-nav-img {
-    height: 40px;
-    width: auto;
-    display: block;
+@media (max-width: 480px) {
+    .nav-container { padding: 12px 16px; }
+    .nav-logo { font-size: 1.3rem; }
+    .nav-links { gap: 12px; }
+    .nav-links a { font-size: 0.85rem; }
+    .nav-links .btn-nav { padding: 6px 12px; }
+    
+    h1 { font-size: 2.7rem; }
+    .subtitle { font-size: 0.85rem; }
+    .wrapper { padding: 30px 16px; }
+    .link-btn { padding: 14px; font-size: 0.95rem; }
+    
+    .logo-main-img { max-width: 220px; }
+    
+    .about-section { padding: 60px 16px; }
+    .about-container h2 { font-size: 1.8rem; }
+    .about-container p { font-size: 1rem; }
 }
-
-.logo-main-container {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.logo-main-img {
-    max-width: 280px;
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0 0 15px rgba(0, 82, 204, 0.5));
-}
-
